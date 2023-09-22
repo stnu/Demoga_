@@ -10,6 +10,7 @@ class Demoqa(BasePage):
         self.icon = WebElement(driver, locator="#app>header>a")
         self.btn_elements = WebElement(driver, locator="#app>div>div>div.home-body>div>div:nth-child(1)")
         self.footer = WebElement(driver, locator="footer > span")
+        self.title = "head > title"
         super().__init__(driver, self.base_url)
 
 

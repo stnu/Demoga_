@@ -3,7 +3,6 @@ from pages.demoqa import Demoqa
 from pages.elements_page import ElementsPage
 
 
-
 def test_go_to_page_elements(browser):
     demo_page = Demoqa(browser)
     demo_element = ElementsPage(browser)

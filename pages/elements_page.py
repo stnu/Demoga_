@@ -17,4 +17,6 @@ class ElementsPage(BasePage):
                                                      locator="div:nth-child(1) > div > ul > #item-1> span")
         self.btns_first_menu = WebElement(driver,
                                           locator="div:nth-child(1) > div > ul > li")
+        self.nav = WebElement(driver,
+                                          locator="div > nav")
         super().__init__(driver, self.base_url)

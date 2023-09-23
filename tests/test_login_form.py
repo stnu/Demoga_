@@ -27,6 +27,6 @@ def test(browser):
     form_page.visit()
     form_page.scrol.click()
     time.sleep(2)
-    form_page.scrol_1.click_force()
+    form_page.scrol_1.click_force() # можно поставить scrol_0 и scrol_2
 
     time.sleep(2)

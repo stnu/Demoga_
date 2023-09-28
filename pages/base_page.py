@@ -1,4 +1,7 @@
+import logging
+
 from selenium.webdriver.common.by import By
+from components.component import WebElement
 
 
 class BasePage:
@@ -6,6 +9,8 @@ class BasePage:
     def __init__(self, driver, base_url):
         self.driver = driver
         self.base_url = base_url
+
+        self.meta = WebElement(driver, locator="head>meta[name = 'viewport']")
 
     def visit(self):
         return self.driver.get(self.base_url)
@@ -29,3 +34,10 @@ class BasePage:
 
     def refresh(self):
         self.driver.refresh()
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex)
+            return False

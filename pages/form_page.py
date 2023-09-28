@@ -8,13 +8,15 @@ class FormPage(BasePage):
         self.base_url = "https://demoqa.com/automation-practice-form"
         self.first_name = WebElement(driver, locator="#firstName")
         self.last_name = WebElement(driver, locator="#lastName")
-        self.user_name = WebElement(driver, locator="#userEmail")
+        self.user_email = WebElement(driver, locator="#userEmail")
         self.gender_radio_1 = WebElement(driver, locator="#gender-radio-1")
         self.user_number = WebElement(driver, locator="#userNumber")
         self.bnt_submit = WebElement(driver, locator="#submit")
         self.modal_dialog = WebElement(driver, locator="body > div.fade.modal.show > div")
         self.bnt_close_modal = WebElement(driver, locator="#closeLargeModal")
         self.bnt_hobbies = WebElement(driver, locator="#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(1) > label")
+        self.user_form = WebElement(driver,
+                                      locator=".was-validated")
         self.adress = WebElement(driver, locator="#currentAddress")
         self.scrol = WebElement(driver, locator="#state > div > div.css-1hwfws3>div")
         self.scrol_0 = WebElement(driver, locator="#react-select-3-option-0")

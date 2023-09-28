@@ -3,6 +3,7 @@ import time
 
 from selenium.webdriver.common.by import By
 
+
 def test_login_form(browser):
     form_page = FormPage(browser)
     form_page.visit()
@@ -27,6 +28,6 @@ def test(browser):
     form_page.visit()
     form_page.scrol.click()
     time.sleep(2)
-    form_page.scrol_1.click_force() # можно поставить scrol_0 и scrol_2
+    form_page.scrol_1.click_force()  # можно поставить scrol_0 и scrol_2
 
     time.sleep(2)

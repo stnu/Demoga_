@@ -19,4 +19,6 @@ class ElementsPage(BasePage):
                                           locator="div:nth-child(1) > div > ul > li")
         self.nav = WebElement(driver,
                                           locator="div > nav")
+        self. block_menu = WebElement(driver,
+                                          locator="div.row>div:nth-child(1)")
         super().__init__(driver, self.base_url)

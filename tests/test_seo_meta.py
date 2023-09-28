@@ -11,16 +11,11 @@ from pages.browser_page import BrowserTab
 import time
 
 
-def test_seo(browser):
-    demo_page = Demoqa(browser)
-    demo_page.visit()
-    assert browser.title == "DEMOQA"
-
-
 @pytest.mark.parametrize("pages", [AccordionPage, AlertPage, Demoqa, BrowserTab])
 def test_check_title_all_pages(browser, pages):
     page = pages(browser)
     page.visit()
     time.sleep(2)
-    assert page.get_title() == "DEMOQA"
-    
+    assert page.meta.exist
+    assert page.meta.get_dom_attribute("name") == "viewport"
+    assert page.meta.get_dom_attribute("content") == "width=device-width,initial-scale=1"
